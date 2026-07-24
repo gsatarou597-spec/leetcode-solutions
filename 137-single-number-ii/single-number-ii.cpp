@@ -5,7 +5,7 @@ public:
         for(auto i:nums){
             num[i]++;
         }
-        for  (const auto& j : num) {
+        for  (auto& j : num) {
             if (j.second == 1) {
                 return j.first;
             }
