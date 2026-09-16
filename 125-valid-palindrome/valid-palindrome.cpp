@@ -2,17 +2,16 @@ class Solution {
 public:
     bool isPalindrome(string s) {
         string r="";
-        for(char c : s){
-            if(!isalnum(c)){
-                continue;
-                
+        for(char c:s){
+            if(isalnum(c)){
+                r+=tolower(c);
             }
-            r+=tolower(c);
         }
-        for(int i=0;i<r.length()/2;i++){
-            if(r[i]!=r[r.length()-1-i]){
-                return false;
-            }
+        int left=0, right=r.length()-1;
+        while(left<right){
+            if(r[left]!=r[right])return false;
+            left++;
+            right--;
         }
         return true;
 
