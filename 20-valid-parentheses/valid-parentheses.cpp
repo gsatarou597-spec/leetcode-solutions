@@ -13,10 +13,10 @@ public:
                         return false;
 
                     }
-                    if(c==']'&&st.top()!='['){
+                    else if(c==']'&&st.top()!='['){
                         return false;
                     }
-                    if(c=='}'&&st.top()!='{'){
+                    else if(c=='}'&&st.top()!='{'){
                         return false;
                         
                     }
